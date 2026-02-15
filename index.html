@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/cssIndex.css" rel="stylesheet" type="text/css" media="all" />
+
+    <title>يوم التأسيس</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">    
+ </head>
+
+
+ <body>
+    <header class="header">
+      <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" height="60">
+            </div>
+           
+            <nav class="navbar">
+                <a href="index.html" class="active">الرئيسية</a>
+                <a href="pages/history.html">تاريخ المملكة</a>
+                <a href="pages/character.html">شخصيات تاريخية</a>
+                <a href="pages/culture.html">اختبر ثقافتك</a>
+                <a href="pages/about.html">من نحن</a>
+            </nav>
+        </div>
+    </header>
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="images/i-1.png" alt="صورة 1">
+            <div class="text" style="color: #5f4e43;">م1727
+..من هنا بدأت الحكاية
+            </div>
+        </div>
+        <div class="slide fade">
+            <img src="images/i-2.png" alt="صورة 2">
+         
+            </div>
+     
+    
+        <!-- أزرار التنقل -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    
+    <!-- محتوى الصفحة -->
+<div class="content">
+    <div class="hero-section">
+        <div class="text" style="position: relative; display: inline-block; text-align: center;">
+            مرحبًا بكم في موقع يوم التأسيس السعودي
+            <p>
+                في 22 فبراير من كل عام، تحتفي المملكة العربية السعودية بذكرى يوم التأسيس  
+                تخليدًا لقيام الدولة السعودية الأولى على يد الإمام محمد بن سعود عام 1727م  
+                إنه يومٌ يعكس جذور دولتنا العريقة، ووحدتنا الوطنية، واعتزازنا بتاريخنا المجيد
+            </p>
+        </div>
+        <img src="images/i-cir.png" class="rotating-image" >
+    </div>
+ 
+       
+        <div class="section-2">
+            <div class="text" style="position: relative; display: inline-block;">
+                أهداف يوم التأسيس
+               <br/></br>
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front"> الجذور الراسخة</div>
+                            <div class="card-back">الاعتزاز بالجذور الراسخة للدولة السعودية</div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front"> الترابط الوثيق</div>
+                            <div class="card-back">الاعتزاز بالارتباط الوثيق بين المواطنين وقادتهم</div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front"> الأمن والاستقرار</div>
+                            <div class="card-back">الاعتزاز بما أرسته الدولة السعودية من الوحدة والاستقرار والأمن</div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front"> الصمود والدفاع</div>
+                            <div class="card-back">الاعتزاز بصمود الدولة السعودية الأولى والدفاع عنها أمام الأعداء</div>
+                        </div>
+                    </div>
+            
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section-3" style="font-size: 20px;">
+           <div class="text" style="position: relative; display: block;">   
+               <h2> الفرق بين يوم التأسيس واليوم الوطني</h2>
+                <div class="comparison-container"><div class="comparison-box national-day">
+                    <h2>اليوم الوطني </h2>
+                    <p><strong> التاريخ:</strong> 23 سبتمبر</p>
+                    <p><strong></strong>يوم توحيد المملكة العربية السعودية عام 1932م على يد الملك عبدالعزيز</p>
+                </div>
+            
+                <div class="line"></div>
+            
+                <div class="comparison-box founding-day">
+                    <h2>يوم التأسيس </h2>
+                    <p><strong> التاريخ:</strong> 22 فبراير</p>
+                    <p><strong> </strong> ذكرى إعلان الإمام محمد بن سعود تأسيس الدولة السعودية الأولى عام 1727م </p>
+                </div>
+            </div>
+        </div>
+        <br/>
+    </div>
+    <br/>
+</div>
+
+<!-- جافاسكريبت لتحديد الصفحة الحالية -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let links = document.querySelectorAll(".navbar a");
+        let currentUrl = window.location.href;
+
+        links.forEach(link => {
+            if (link.href === currentUrl) {
+                links.forEach(l => l.classList.remove("active")); // إزالة التفعيل عن الكل
+                link.classList.add("active"); // تفعيل الصفحة الحالية
+            }
+        });
+    });
+</script>
+<script>
+let slideIndex = 0;
+let slideTimeout;
+
+function showSlides() {
+let slides = document.querySelectorAll(".slide");
+slides.forEach(slide => {
+    slide.style.display = "none";
+});
+
+slideIndex++;
+if (slideIndex > slides.length) { slideIndex = 1; }
+
+slides[slideIndex - 1].style.display = "block";
+
+slideTimeout = setTimeout(showSlides, 4000);
+}
+
+function changeSlide(n) {
+clearTimeout(slideTimeout); // إيقاف التبديل التلقائي عند استخدام الأزرار
+slideIndex += n - 1;
+showSlides();
+}
+
+showSlides();
+
+</script>
+
+</body>
+
+<footer class="footer">
+<h3>&copy; 2025 جميع الحقوق محفوظة</h3>
+<a href="pages/about.html">
+    <img src="images/icon.png" alt="قروب" width="50">
+</a> 
+</footer>
+</html>

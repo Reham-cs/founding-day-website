@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/cssIndex.css"rel="stylesheet" type="text/css" media="all" />
+    
+    <title>يوم التأسيس</title>
+            
+ </head>
+<style>
+  
+.container-a {
+  margin: 0;
+  padding: 0;
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+
+}
+.background-img {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 300px; /* تحكم في حجم الصورة */
+    opacity: 0.7; /* تقليل الوضوح حتى لا تطغى على النص */
+    z-index: -1; /* جعلها في الخلف */
+}
+
+h2 {
+  font-size: 32px;
+  color: #5a3c2c;
+  margin-bottom: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  direction: rtl;
+  text-align: center;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* تصميم الشريط */
+.strip {
+  background-color: #f9f3ec;
+  border-left: 5px solid #5a3c2c; /* خط جانبي */
+  border-radius: 10px;
+  width: 60%;  /* تقليل العرض ليكون متناسقًا */
+  max-width: 500px; /* تحديد الحد الأقصى للعرض */
+  padding: 12px;
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.strip:hover {
+  background-color: #8cab7e;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* تصميم خاص بالمشرف */
+.supervisor {
+  background-color: #5a3c2c;
+  color: white;
+  border-left: 5px solid #6a5752;
+}
+
+/* تحسين التناسق على الشاشات الصغيرة */
+@media (max-width: 600px) {
+  .strip {
+      width: 80%; 
+      font-size: 18px;
+      padding: 10px;
+  }
+}
+</style>
+
+ <body>
+    <header class="header">
+      <div class="navbar">
+            <div class="logo">
+                <img src="../images/logo.png" height="60">
+            </div>
+           
+            <nav class="navbar">
+                <a href="../index.html" >الرئيسية</a>
+                <a href="history.html">تاريخ المملكة</a>
+                <a href="character.html">شخصيات تاريخية</a>
+                <a href="culture.html">اختبر ثقافتك</a>
+                <a href="about.html"class="active">من نحن</a>
+            </nav>
+        </div>
+
+
+    </header>
+
+  
+<h2 >فريق العمل</h2>
+<h2  style="font-size: 25px;">
+    من قلب الشغف والإبداع، أطلقنا هذا الموقع لنروي عبر صفحاته قصة وطنٍ مجيد.نحن طالبات قسم علوم الحاسب<br/>
+      وتحت إشراف الدكتورة بسمة الوسلاتي، عملنا بكل تفانٍ لنقدم محتوى يعكس حبنا لتاريخ مملكتنا وفخرنا بجذورها العريقة. <br/>
+هذا العمل هو ثمرة اجتهاد وساعات من الإصرار، نهديه لكل من يشاركنا عشق هذه الأرض وهويتها الخالدة<br/>
+</h2>
+
+
+    <div class="container-a">
+    <div class="team">
+        <img src="../images/i-f.png" class="background-img">
+    <div class="strip">  طيف  ماجد الناقول السبيعي </div>
+        <div class="strip">ندى مسلم باتل السبيعي </div>
+        <div class="strip"> لين عبدالله فهيد الحضبي</div>
+        <div class="strip">رهام سعد محمد العتيبي</div>
+        <div class="strip supervisor">  إشراف:د.بسمة الوسلاتي </div>
+    </div>
+</div>
+
+    
+</body>
+  
+<footer class="footer">
+    <h3>&copy; 2025 جميع الحقوق محفوظة</h3>
+    <a href="about.html">
+        <img src="../images/icon.png" alt="قروب" width="50">
+    </a> 
+ </footer>
+</html>
